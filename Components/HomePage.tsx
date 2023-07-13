@@ -11,12 +11,12 @@ export default function HomePage({ serverData }: { serverData: datatype }) {
   const [data, setData] = useState(serverData);
 
   return (
-    <main className="mt-1 py-6 px-6 text-black bg-[#fafafa] font-light">
+    <main className="mt-1 py-6 text-black px-10 bg-[#fafafa] font-light">
       <div className="flex justify-between items-center mb-6">
         <SearchBar serverData={serverData} setData={setData} />
         <FilterBtn serverData={serverData} setData={setData} />
       </div>
-      <section className="flex flex-col flex-wrap gap-2 justify-around md:flex-row">
+      <section className="flex flex-col flex-wrap gap-2 justify-between md:flex-row">
         {data.length ? (
           data.map((item) => (
             <Link

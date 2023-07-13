@@ -2,6 +2,7 @@
 
 import { datatype } from "@/app/api/country/route";
 import { SetStateAction, useState } from "react";
+import {AiOutlineSearch} from "react-icons/ai"
 
 export default function SearchBar({
   serverData,
@@ -19,15 +20,15 @@ export default function SearchBar({
     setData(copy);
   }
   return (
-    <div>
+    <div className="bg-white shadow flex items-center gap-4 px-6 py-2 rounded">
+      <button onClick={search}><AiOutlineSearch /></button>
       <input
         type="text"
-        placeholder="Search for a country"
-        className="shadow"
+        placeholder="Search for a country..."
+        className="pr-28 focus-within:outline-none"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button onClick={search}>click</button>
     </div>
   );
 }
