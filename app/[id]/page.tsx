@@ -1,15 +1,17 @@
+import DetailPage from "@/Components/DetailPage";
 import { datatype } from "../api/country/route";
 
-export async function getData() {
+export async function getData(id: string) {
     const data = await fetch("http://localhost:3000/api/country");
-    const res: Promise<datatype> = data.json();
-    return res;
+    const res: datatype = await data.json();
+    const item = res.filter(item => item.alpha3Code === id)[0]
+    return item;
   }
 
 export default async function Home({params}: {params: {id: string}}) {
-    const country = await getData()
-    const data = country.filter(item => item.alpha3Code === params.id)[0]
+    const country = await getData(params.id)
+    
   return (
-    <div>{data.name}</div>
+    <DetailPage country={country} />
   )
 }

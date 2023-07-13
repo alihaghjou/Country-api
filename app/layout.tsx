@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="text-black">
+      <body className="text-[#111517]">
         <Header />
         {children}
       </body>
