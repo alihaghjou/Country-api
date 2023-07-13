@@ -11,7 +11,7 @@ export default function HomePage({ serverData }: { serverData: datatype }) {
   const [data, setData] = useState(serverData);
 
   return (
-    <main className="mt-1 py-6 text-black px-10 bg-[#fafafa] font-light">
+    <main className="mt-1 py-6 text-black px-10 bg-[#fafafa] font-light text-sm">
       <div className="flex justify-between items-center mb-6">
         <SearchBar serverData={serverData} setData={setData} />
         <FilterBtn serverData={serverData} setData={setData} />
@@ -31,7 +31,7 @@ export default function HomePage({ serverData }: { serverData: datatype }) {
                 width={128}
                 alt="Flag"
               />
-              <div className="p-2 pb-8">
+              <div className="p-2 pl-4 pb-8">
                 <h1 className="text-lg py-3 font-semibold">{item.name}</h1>
                 <p>
                   Population:{" "}

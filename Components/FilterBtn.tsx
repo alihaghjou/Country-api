@@ -15,6 +15,7 @@ export default function FilterBtn({
   function filterByRegion(region: string) {
     const copy = serverData.filter((item) => item.region === region);
     setData(copy);
+    setShow(false)
   }
 
   return (

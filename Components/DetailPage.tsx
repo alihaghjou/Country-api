@@ -7,7 +7,7 @@ import {AiOutlineArrowLeft} from "react-icons/ai"
 
 export default function DetailPage({ country }: { country: datatype[0] }) {
   return (
-    <section className="flex flex-col p-6 mt-6 mx-4 gap-6">
+    <section className="flex flex-col p-6 mt-6 mx-4 gap-6 text-base">
       <Link href={"/"}>
         <button className="shadow rounded py-2 px-6 flex items-center gap-2"><AiOutlineArrowLeft />Back</button>
       </Link>
