@@ -6,7 +6,7 @@ import { datatype } from "@/app/api/country/route";
 
 export default function HomePage({ data }: { data: datatype }) {
   return (
-    <main className="p-8 text-black bg-[#fafafa]">
+    <main className="p-8 mt-6 text-black bg-[#fafafa] font-light">
       <div className="flex justify-between mb-6">
         <input type="text" />
         <button>filter</button>
@@ -26,7 +26,7 @@ export default function HomePage({ data }: { data: datatype }) {
               alt="Flag"
             />
             <div className="p-2 pb-8">
-              <h1 className="text-lg py-3">{item.name}</h1>
+              <h1 className="text-lg py-3 font-semibold">{item.name}</h1>
               <p>
                 Population:{" "}
                 <span className="text-[#858585]">{item.population}</span>
