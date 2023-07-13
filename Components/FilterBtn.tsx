@@ -21,13 +21,13 @@ export default function FilterBtn({
   return (
     <div className="flex flex-col relative">
       <button
-        className="bg-white flex items-center gap-5 px-4 py-2 rounded shadow"
+        className="bg-white flex items-center gap-5 px-4 py-2 rounded shadow dark:bg-[#2b3945]"
         onClick={() => setShow(!show)}
       >
         Filter by Region <IoMdArrowDropdown />
       </button>
       {show && (
-        <div className="absolute top-12 shadow text-left gap-2 flex flex-col bg-white rounded p-3 w-full">
+        <div className="absolute top-12 shadow text-left gap-2 flex flex-col bg-white rounded p-3 w-full dark:bg-[#2b3945]">
           <button onClick={() => filterByRegion("Africa")}>Africa</button>
           <button onClick={() => filterByRegion("Americas")}>America</button>
           <button onClick={() => filterByRegion("Asia")}>Asia</button>

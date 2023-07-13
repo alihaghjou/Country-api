@@ -20,12 +20,12 @@ export default function SearchBar({
     setData(copy);
   }
   return (
-    <div className="bg-white shadow flex items-center gap-4 px-6 py-2 rounded">
+    <div className="bg-white shadow flex items-center gap-4 px-6 py-2 rounded dark:bg-[#2b3945]">
       <button onClick={search}><AiOutlineSearch /></button>
       <input
         type="text"
         placeholder="Search for a country..."
-        className="pr-28 focus-within:outline-none"
+        className="pr-28 focus-within:outline-none py-2 dark:bg-[#2b3945]"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />

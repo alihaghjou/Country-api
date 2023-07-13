@@ -11,8 +11,8 @@ export default function HomePage({ serverData }: { serverData: datatype }) {
   const [data, setData] = useState(serverData);
 
   return (
-    <main className="mt-1 py-6 text-black px-10 bg-[#fafafa] font-light text-sm">
-      <div className="flex justify-between items-center mb-6">
+    <main className="py-6 text-black px-10 bg-[#fafafa] font-light text-sm dark:bg-[#202c37] dark:text-white min-h-screen">
+      <div className="flex md:flex-row gap-4 flex-col justify-between items-center mb-6">
         <SearchBar serverData={serverData} setData={setData} />
         <FilterBtn serverData={serverData} setData={setData} />
       </div>
@@ -21,7 +21,7 @@ export default function HomePage({ serverData }: { serverData: datatype }) {
           data.map((item) => (
             <Link
               href={`/${item.alpha3Code}`}
-              className="flex flex-col mb-8 md:w-1/5 bg-white border border-gray-200 rounded-lg shadow"
+              className="flex flex-col mb-8 md:w-1/5 bg-white border border-gray-200 rounded-lg shadow dark:bg-[#2b3945] dark:border-[#2b3945]"
               key={item.alpha3Code}
             >
               <Image
@@ -51,6 +51,7 @@ export default function HomePage({ serverData }: { serverData: datatype }) {
           <div>No Country Found</div>
         )}
       </section>
+        <p className="text-center">Total Country: {data.length}</p>
     </main>
   );
 }

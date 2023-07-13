@@ -3,13 +3,16 @@
 import { datatype } from "@/app/api/country/route";
 import Image from "next/image";
 import Link from "next/link";
-import {AiOutlineArrowLeft} from "react-icons/ai"
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 export default function DetailPage({ country }: { country: datatype[0] }) {
   return (
-    <section className="flex flex-col p-6 mt-6 mx-4 gap-6 text-base">
+    <section className="flex flex-col p-6 pt-12 gap-6 text-base min-h-full dark:bg-[#202c37] dark:text-white">
       <Link href={"/"}>
-        <button className="shadow rounded py-2 px-6 flex items-center gap-2"><AiOutlineArrowLeft />Back</button>
+        <button className="shadow rounded py-2 px-6 flex items-center gap-2 dark:bg-[#2b3945]">
+          <AiOutlineArrowLeft />
+          Back
+        </button>
       </Link>
       <div className="flex md:flex-row flex-col justify-center items-center gap-8">
         <Image
@@ -76,7 +79,7 @@ export default function DetailPage({ country }: { country: datatype[0] }) {
               {country.borders?.map((item) => (
                 <span
                   key={item}
-                  className="shadow rounded px-6 py-1 text-[#858585]"
+                  className="shadow dark:bg-[#2b3945] rounded px-6 py-1 text-[#858585]"
                 >
                   {item}
                 </span>
