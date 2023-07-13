@@ -3,13 +3,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { datatype } from "@/app/api/country/route";
+import {IoMdArrowDropdown} from "react-icons/io"
 
 export default function HomePage({ data }: { data: datatype }) {
   return (
-    <main className="p-8 mt-6 text-black bg-[#fafafa] font-light">
+    <main className="p-8 pt-6 text-black bg-[#fafafa] font-light">
       <div className="flex justify-between mb-6">
-        <input type="text" />
-        <button>filter</button>
+        <input type="text" placeholder="Search for a country" className="shadow"/>
+        <button className="bg-white flex items-center gap-5 px-4 py-2 rounded shadow">Filter by Region <IoMdArrowDropdown /></button>
       </div>
       <section className="flex flex-col flex-wrap gap-2 justify-around md:flex-row">
         {data.map((item) => (
