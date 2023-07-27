@@ -2,7 +2,7 @@ import { datatype } from "./api/country/route";
 import HomePage from "@/Components/HomePage";
 
 async function getData() {
-  const data = await fetch("http://localhost:3000/api/country");
+  const data = await fetch(`${process.env.URL_API}/api/country`);
   const res: Promise<datatype> = data.json();
   return res;
 }
