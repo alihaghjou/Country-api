@@ -2,7 +2,8 @@ import { datatype } from "./api/country/route";
 import HomePage from "@/Components/HomePage";
 
 async function getData() {
-  const data = await fetch(`http://${process.env.VERCEL_URL}/api/country`);
+  console.log(process.env.URL)
+  const data = await fetch(`${process.env.URL}/api/country`);
   const res: Promise<datatype> = data.json();
   return res;
 }
